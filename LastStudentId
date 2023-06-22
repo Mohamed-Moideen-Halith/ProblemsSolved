@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.TreeSet;
+public class LastStudentId {
+    public static void maxString(char set[]){
+        int n = set.length;
+
+        TreeSet<String> list = new TreeSet<>();
+        for(int i = 0; i < n; i++){
+            String temp = "";
+            for(int j = i; j < n; j++){
+                temp = temp + set[j];
+                list.add(temp);
+            }
+        }
+        System.out.println(list);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String n = sc.next();
+        char arr[] = n.toCharArray();
+        maxString(arr);
+    }
+}
